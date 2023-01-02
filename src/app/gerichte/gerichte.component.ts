@@ -16,7 +16,7 @@ export class GerichteComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  /*   onSelect(): void {
+  onSelect(rezept: Rezept): void {
     this.selectedRezept = rezept;
-  } */
+  }
 }

@@ -1,11 +1,26 @@
 <h2>Meine Rezepte</h2>
 <ul class="rezepte">
   <li *ngFor="let rezept of rezepte">
-    <button type="button">
-      <!-- <span>{{ rezept.id }}</span> -->
-      <span>{{ rezept.name }}</span>
+    <button
+      [class.selected]="rezept === selectedRezept"
+      type="button"
+      (click)="onSelect(rezept)"
+    >
+      <span class="badge">{{ rezept.id }}</span>
+      <span class="name">{{ rezept.name }}</span>
     </button>
   </li>
 </ul>
 
-<p>{{ "Weitere Infos" | lowercase }}</p>
+<!-- <div *ngif="selectedRezept">
+  <h2>{{ selectedRezept.name | uppercase }} Details</h2>
+  <div>id: {{ selectedRezept.id }}</div>
+  <div>
+    <label for="rezept-name">Rezept name:</label>
+    <input
+      id=" rezept-name"
+      [(ngModel)]="selectedRezept.name"
+      placeholder="name"
+    />
+  </div>
+</div> -->
