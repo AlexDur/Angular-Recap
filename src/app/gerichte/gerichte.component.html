@@ -1,3 +1,11 @@
-<p>{{ rezept1 }}</p>
-<p>{{ rezept2 }}</p>
-<p>{{ rezept3 }}</p>
+<h2>Meine Rezepte</h2>
+<ul class="rezepte">
+  <li *ngFor="let rezept of rezepte">
+    <button type="button">
+      <!-- <span>{{ rezept.id }}</span> -->
+      <span>{{ rezept.name }}</span>
+    </button>
+  </li>
+</ul>
+
+<p>{{ "Weitere Infos" | lowercase }}</p>
