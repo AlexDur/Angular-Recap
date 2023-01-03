@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Rezept } from './rezept';
-import { REZEPTE } from './mock-rezept';
+import { Rezept } from '../rezept';
+import { RezeptService } from '../rezept.service';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-gerichte',
@@ -9,14 +10,29 @@ import { REZEPTE } from './mock-rezept';
   styleUrls: ['./gerichte.component.scss'],
 })
 export class GerichteComponent implements OnInit {
-  rezepte = REZEPTE;
   selectedRezept?: Rezept;
 
-  constructor() {}
+  rezepte: Rezept[] = [];
 
-  ngOnInit(): void {}
+  constructor(
+    private rezeptService: RezeptService,
+    private messageService: MessageService
+  ) {}
+
+  ngOnInit(): void {
+    this.getRezepte();
+  }
 
   onSelect(rezept: Rezept): void {
     this.selectedRezept = rezept;
+    this.messageService.add(
+      `RezepteComponent: Selected rezept id=${rezept.id}`
+    );
+  }
+
+  getRezepte(): void {
+    this.rezeptService
+      .getRezepte()
+      .subscribe((rezepte) => (this.rezepte = rezepte));
   }
 }

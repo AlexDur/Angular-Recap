@@ -1,3 +1,11 @@
+<!--     The Tour of Rezepte application displays a list of rezepte with a detail view.
+    The user can select a hero and see that hero's details.
+    I used *ngFor to display a list.
+    I used used *ngIf to conditionally include or exclude a block of HTML.
+    I can toggle a CSS style class with a class binding. -->
+
+<!-- gericht component as parent -->
+
 <h2>Meine Rezepte</h2>
 <ul class="rezepte">
   <li *ngFor="let rezept of rezepte">
@@ -12,15 +20,4 @@
   </li>
 </ul>
 
-<!-- <div *ngif="selectedRezept">
-  <h2>{{ selectedRezept.name | uppercase }} Details</h2>
-  <div>id: {{ selectedRezept.id }}</div>
-  <div>
-    <label for="rezept-name">Rezept name:</label>
-    <input
-      id=" rezept-name"
-      [(ngModel)]="selectedRezept.name"
-      placeholder="name"
-    />
-  </div>
-</div> -->
+<app-rezepte-detail [rezept]="selectedRezept"></app-rezepte-detail>
