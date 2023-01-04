@@ -2,9 +2,10 @@
 
 <div *ngif="rezept">
   <h2>{{ rezept.name | uppercase }} Details</h2>
-  <div>id: {{ rezept.id }}</div>
+  <div><span>id: </span> {{ rezept.id }}</div>
   <div>
     <label for="rezept-name">Rezept name:</label>
     <input id=" rezept-name" [(ngModel)]="rezept.name" placeholder="name" />
   </div>
+  <button type="button" (click)="goBack()">go back</button>
 </div>

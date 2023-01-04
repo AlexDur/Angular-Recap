@@ -1,0 +1,6 @@
+<h2>Top Rezepte</h2>
+<div class="rezepte-menu">
+  <a *ngFor="let rezept of rezepte" routerLink="/detail/{{ rezept.id }}">
+    {{ rezept.name }}
+  </a>
+</div>

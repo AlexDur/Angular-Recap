@@ -17,4 +17,10 @@ export class RezeptService {
     this.messageService.add('RezeptService: fetched rezepte');
     return rezepte;
   }
+
+  getRezept(id: number): Observable<Rezept> {
+    const rezept = REZEPTE.find((h) => h.id === id)!;
+    this.messageService.add(`RezeptService: fetched rezept id=${id}`);
+    return of(rezept);
+  }
 }

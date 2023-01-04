@@ -7,11 +7,13 @@ import { GerichteComponent } from './gerichte/gerichte.component';
 
 import { FormsModule } from '@angular/forms';
 import { RezepteDetailComponent } from './rezepte-detail/rezepte-detail.component';
-import { MessagesComponent } from './messages/messages.component'; // <-- NgModel lives here
+import { MessagesComponent } from './messages/messages.component';
+import { DashboardComponent } from './dashboard/dashboard.component'; // <-- NgModel lives here
 
 @NgModule({
   declarations: [
     AppComponent,
+    DashboardComponent,
     GerichteComponent,
     RezepteDetailComponent,
     MessagesComponent,

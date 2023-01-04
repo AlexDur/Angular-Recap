@@ -9,15 +9,8 @@
 <h2>Meine Rezepte</h2>
 <ul class="rezepte">
   <li *ngFor="let rezept of rezepte">
-    <button
-      [class.selected]="rezept === selectedRezept"
-      type="button"
-      (click)="onSelect(rezept)"
-    >
-      <span class="badge">{{ rezept.id }}</span>
-      <span class="name">{{ rezept.name }}</span>
-    </button>
+    <a routerLink="/detail/{{ rezept.id }}">
+      <span class="badge">{{ rezept.id }}</span> {{ rezept.name }}
+    </a>
   </li>
 </ul>
-
-<app-rezepte-detail [rezept]="selectedRezept"></app-rezepte-detail>

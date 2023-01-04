@@ -10,25 +10,23 @@ import { MessageService } from '../message.service';
   styleUrls: ['./gerichte.component.scss'],
 })
 export class GerichteComponent implements OnInit {
-  selectedRezept?: Rezept;
+  /*   selectedRezept?: Rezept; */
 
   rezepte: Rezept[] = [];
 
-  constructor(
-    private rezeptService: RezeptService,
-    private messageService: MessageService
-  ) {}
+  constructor(private rezeptService: RezeptService) {}
+  /*     private messageService: MessageService */
 
   ngOnInit(): void {
     this.getRezepte();
   }
 
-  onSelect(rezept: Rezept): void {
+  /*   onSelect(rezept: Rezept): void {
     this.selectedRezept = rezept;
     this.messageService.add(
       `RezepteComponent: Selected rezept id=${rezept.id}`
     );
-  }
+  } */
 
   getRezepte(): void {
     this.rezeptService
