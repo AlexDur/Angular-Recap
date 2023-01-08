@@ -1,0 +1,29 @@
+[33mcommit 1ef0c5f40f2b69173e86701a73f2d358e4a0bb9f[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Alusch <alexdurach@gmail.com>
+Date:   Wed Jan 4 23:00:58 2023 +0100
+
+    Navigation hinzugetan
+
+[33mcommit 79de41a5c5e6b12e4dda629063b34fb36cf61999[m
+Author: Alusch <alexdurach@gmail.com>
+Date:   Tue Jan 3 23:58:09 2023 +0100
+
+    services implementiert
+
+[33mcommit 05a5fe92b1c18c0cd99aef6a4fc233b9b3c19a05[m
+Author: Alusch <alexdurach@gmail.com>
+Date:   Tue Jan 3 00:54:48 2023 +0100
+
+    Selected Funktion nocht nicht implementiert
+
+[33mcommit 38fb091891f0fe299e30c24d63664f876ee74b19[m
+Author: Alusch <alexdurach@gmail.com>
+Date:   Tue Jan 3 00:41:37 2023 +0100
+
+    Namen werden angezeit
+
+[33mcommit c6ccb08809b2647ff27b206094c9b20d21d61252[m
+Author: Alusch <alexdurach@gmail.com>
+Date:   Sun Jan 1 16:35:23 2023 +0100
+
+    first commit
