@@ -12,6 +12,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { TableModule } from 'primeng/table';
 import { RezeptService } from './rezept.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
