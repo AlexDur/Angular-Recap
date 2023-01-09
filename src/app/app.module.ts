@@ -8,7 +8,9 @@ import { GerichteComponent } from './gerichte/gerichte.component';
 import { FormsModule } from '@angular/forms';
 import { RezepteDetailComponent } from './rezepte-detail/rezepte-detail.component';
 import { MessagesComponent } from './messages/messages.component';
-import { DashboardComponent } from './dashboard/dashboard.component'; // <-- NgModel lives here
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { TableModule } from 'primeng/table';
+import { RezeptService } from './rezept.service';
 
 @NgModule({
   declarations: [
@@ -18,8 +20,8 @@ import { DashboardComponent } from './dashboard/dashboard.component'; // <-- NgM
     RezepteDetailComponent,
     MessagesComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, TableModule],
+  providers: [RezeptService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
