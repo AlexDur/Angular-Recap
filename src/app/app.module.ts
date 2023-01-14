@@ -9,9 +9,10 @@ import { FormsModule } from '@angular/forms';
 import { RezepteDetailComponent } from './rezepte-detail/rezepte-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { TableModule } from 'primeng/table';
 import { RezeptService } from './rezept.service';
+import { RezeptelisteComponent } from './rezept-liste/rezept-liste.component';
 
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { RezeptService } from './rezept.service';
     GerichteComponent,
     RezepteDetailComponent,
     MessagesComponent,
+    RezeptelisteComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, TableModule],
   providers: [RezeptService],

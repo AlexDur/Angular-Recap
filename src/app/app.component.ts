@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { PrimeNGConfig } from 'primeng/api';
+import { Table } from 'primeng/table';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Dishlist';
+  @ViewChild('dt') table: Table;
+
+  constructor(private primengConfig: PrimeNGConfig) {}
 }

@@ -1,18 +1,18 @@
-<p-table [value]="rezepte" [tableStyle]="{ 'min-width': '50rem' }">
+<p-table [value]="rezepte>
   <ng-template pTemplate="header">
     <tr>
-      <th>Code</th>
-      <th>Name</th>
-      <th>Category</th>
-      <th>Quantity</th>
+      <th>Vin</th>
+      <th>Year</th>
+      <th>Brand</th>
+      <th>Color</th>
     </tr>
   </ng-template>
-  <ng-template pTemplate="body" let-rezept>
+  <ng-template pTemplate="body" let-car>
     <tr>
-      <td>{{ rezept.code }}</td>
-      <td>{{ rezept.name }}</td>
-      <td>{{ rezept.category }}</td>
-      <td>{{ rezept.quantity }}</td>
+      <td>{{ car.vin }}</td>
+      <td>{{ car.year }}</td>
+      <td>{{ car.brand }}</td>
+      <td>{{ car.color }}</td>
     </tr>
   </ng-template>
 </p-table>
